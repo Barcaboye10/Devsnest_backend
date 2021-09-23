@@ -1,0 +1,14 @@
+{
+  "name": "day-8",
+  "version": "1.0.0",
+  "description": "MIDDLEWARE:\r     -A function which runs before running our function with main excecution to check whether or not is it okay to run our main function.\r     -This function has a third parameter next, and it is used to call our function with main excecution(by writing \"main()\").",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rajat",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
