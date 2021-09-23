@@ -1,0 +1,7 @@
+POSTMAN -  a tool to do all the API Testing
+Uses:
+    -make Requests via different HTTP Methods.
+    -view responses, set and process headers, etc.
+    -helps in achieving authentication.
+    -group API Requests(Collections)
+    

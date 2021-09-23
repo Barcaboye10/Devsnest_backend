@@ -1,0 +1,36 @@
+API - Application Programming Interface
+Basically a common language which both the front end and the back end understands
+    UI/Frontend          -> api endpoints <-         Backend
+                                                   (Server Side)
+
+E.g. https://api.twitter.com/getTweets 
+
+Public
+    Google Maps API
+    Twitter API
+    Weather API
+
+        -publically exposed, anyone with valid credentials can use these.
+        -we can plug these into out applications
+Private
+    xyz.com/apis/getUsers
+        -protected
+        -which we design for a particular company.
+        -needs some kind of authentication to use.
+
+
+http://localhost:3000/getUsers
+
+    -Endpoint Name - getUsers
+    -port : 3000
+    -domain name
+    -http or https
+
+Node JS -> server-side scripting using JS
+Express JS -> built and runs on top of Node, thus this is a backend framework.
+           -> makes it easy to code as compared to doing the same job using Node.
+
+POSTMAN tool
+    - 95% of the Fortune 500 companies use Postman for testing APIs.
+    - Really Powerful.
+
