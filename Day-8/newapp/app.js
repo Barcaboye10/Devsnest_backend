@@ -26,8 +26,26 @@ app.get("/getMoreFunctions", (req,res,next) => {
     // MIDDLEWARE.
 }, (req,res) =>{
     res.status(200);
-    res.json(req.query)
+    res.json(req.query);
 });
+
+
+const checkAdmin = (req, res, next)=>{
+    console.log(req.query);
+    if(req.query.admin === 'true')
+    {
+        next();
+    }
+    else{
+        res.status(400).send("must be admin");
+    }
+};
+const sendRes = (req, res)=>{
+    res.status(200)
+    res.json(req.query)
+};
+
+app.get("/getMiddleware",checkAdmin,sendRes);
 
 
 app.listen(4000);// listening on port:4000
