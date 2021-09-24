@@ -40,12 +40,13 @@ const checkAdmin = (req, res, next)=>{
         res.status(400).send("must be admin");
     }
 };
+// app.use(checkAdmin);
 const sendRes = (req, res)=>{
     res.status(200)
     res.json(req.query)
 };
 
-app.get("/getMiddleware",checkAdmin,sendRes);
+app.get("/",sendRes);
 
 
 app.listen(4000);// listening on port:4000
