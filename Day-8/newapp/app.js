@@ -1,5 +1,6 @@
 const express = require("express");
 const app=express();
+const bodyParser = require("body-parser");
 
 app.get("/getUsers", (req,res)=> {
     res.send("Hello World");
@@ -41,10 +42,17 @@ const checkAdmin = (req, res, next)=>{
     }
 };
 // app.use(checkAdmin);
+app.use(bodyParser.urlencoded({extended: true}));//to handle form data in POST request
+app.use(bodyParser.json)//to understand the json.
 const sendRes = (req, res)=>{
     res.status(200)
     res.json(req.query)
 };
+
+app.post('/', (req,res) => {
+    console.log('req body -> ', req.body);
+    res.json({text: req.body});
+})
 
 app.get("/",sendRes);
 

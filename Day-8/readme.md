@@ -15,3 +15,7 @@ Note: url is stored in cache memory, to jab bhi url search karoge, agar
       cache me mil gayi to wahan se aayega, else server side se API le aayega.
       Problem with cache: Password bhi cache memory me chala jayega and cache memory is easily useable.
       Solution: Password ko GET nahi karte hain, POST karte hain(because POST is more secured).
+
+body-parser
+    -post me jab data encrypted form me ho, tab wo data 'req.body' me aata to hai, but use access nahi kar sakte(console me undefined hoga). To access that, we need body-parser.
+    -we use body-parser to handle form data on POST request
