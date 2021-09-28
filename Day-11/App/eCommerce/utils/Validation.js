@@ -7,7 +7,8 @@ const passwordValidate = (password) =>{
     return re.test(password);//re.test tests whether given string is valid according to given regex
 }
 
+//do values export karna hai, is liye object bana ke saath me export kar diya.
 modules.exports = {
     emailValidate,
     passwordValidate
-}//do values export karna hai, is liye object bana ke saath me export kar diya.
+}
