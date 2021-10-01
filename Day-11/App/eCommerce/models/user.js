@@ -1,6 +1,7 @@
 const {DataTypes} =require("sequelize");
-const sequelize =require("../database/index");
+const sequelize =require("../database");
 
+//model of the database
 const User = sequelize.define("User", {
     fullName:{
         type:DataTypes.STRING,
@@ -17,4 +18,4 @@ const User = sequelize.define("User", {
 });
 
 
-modules.exports = User
+module.exports = User

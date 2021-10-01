@@ -8,7 +8,7 @@ const passwordValidate = (password) =>{
 }
 
 //do values export karna hai, is liye object bana ke saath me export kar diya.
-modules.exports = {
+module.exports = {
     emailValidate,
     passwordValidate
 }

@@ -2,11 +2,17 @@ var express = require('express');
 var router = express.Router();
 var registerInitialCheck = require("../middlewares/registerCheck");
 var register = require("../controllers/registerController");
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  const sess = req.session;// sess me poora session aa jayega redis ka.
+  sess.username = "Rajat";
   res.render('index', { title: 'Express' });
 });
-
+router.get('/test', function(req, res, next) {
+  console.log("Redis Value: ", req.session.username);
+  res.render('index', { title: 'Express' });
+});
 /**
  * @requires{ email, firstName, lastName, password, confirmPassword} -> req.body
  * @description

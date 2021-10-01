@@ -3,7 +3,7 @@ const {Sequelize}=require("sequelize");
 const sequelize=new Sequelize(
     "postgres",//database name
     "postgres",//name of user
-    "123456789",//password
+    "Rajat@sjc2017",//password of your database.
     {
         host: "localhost",
         dialect: "postgres"//database being used(agar mySql use karna hai to bas ye badal do to kaam ho jayega)
@@ -25,7 +25,7 @@ sequelize.sync();
     catch(err){
         console.error("Unable to connect to DB");
     }
-})()
+})();
 
 
-modules.exports = sequelize;
+module.exports = sequelize;
